@@ -3,13 +3,12 @@ library(boot)
 set.seed(111)
 # Load data
 setwd("/home/bucknete")
-#setwd("~/Dropbox/School/MS Thesis")
 
 
-psv <- read.csv("C:/Users/bucknete/OneDrive - The University of Colorado Denver/daisy/OXYLIPINS/METHYLATION MEDIATION/scoredpsvage.csv", na.strings="")
-sv <- read.csv ("C:/Users/bucknete/OneDrive - The University of Colorado Denver/daisy/OXYLIPINS/METHYLATION MEDIATION/scoredsvage.csv", na.strings="")
+#psv <- read.csv("C:/Users/bucknete/OneDrive - The University of Colorado Denver/daisy/OXYLIPINS/METHYLATION MEDIATION/scoredpsvage.csv", na.strings="")
+#sv <- read.csv ("C:/Users/bucknete/OneDrive - The University of Colorado Denver/daisy/OXYLIPINS/METHYLATION MEDIATION/scoredsvage.csv", na.strings="")
 
-load("C:/Users/bucknete/OneDrive - The University of Colorado Denver/daisy/OXYLIPINS/METHYLATION MEDIATION/psv_sv_dataset.RData")
+load("psv_sv_dataset.RData")
 
 #load("./data/raw_data/probesFromPipeline.Rdata")
 #load("./data/raw_data/psv_sv_dataset.Rdata")
@@ -29,7 +28,7 @@ age = as.numeric(psv$clinage)
 covariates = as.data.frame(cbind(ia,sex,dr34,age,age_delta))
 
 # Pairs
-load("C:/Users/bucknete/OneDrive - The University of Colorado Denver/daisy/OXYLIPINS/METHYLATION MEDIATION/probesFromPipeline.RData")
+load("probesFromPipeline.RData")
 oxylipins = paste0("bc_oxylipin",1:48)
 
 pairs = expand.grid(probesFromPipeline,oxylipins,stringsAsFactors = F)
