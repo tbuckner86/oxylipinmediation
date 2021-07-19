@@ -2,7 +2,7 @@ library(regmedint)
 library(boot)
 set.seed(111)
 # Load data
-setwd("C:/Users/bucknete/OneDrive - The University of Colorado Denver/daisy/OXYLIPINS/METHYLATION MEDIATION")
+setwd("/home/bucknete")
 #setwd("~/Dropbox/School/MS Thesis")
 
 
