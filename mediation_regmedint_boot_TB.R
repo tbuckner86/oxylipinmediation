@@ -57,8 +57,8 @@ regmed_boot = function(d,i){
   summary(regmedint_obj)$summary_myreg[,1]
 }
 # Bootstrap options
-boot_cores = 4
-boots = 100
+boot_cores = 16
+boots = 1000
 # Testing
 pairs = pairs[1:5,]
 # Iterate through all
